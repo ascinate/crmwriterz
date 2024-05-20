@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="marhansolutions.com" />
+    <title>Writerz - Manage user</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=Kanit:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&family=Poppins:wght@500;600;700;800;900&family=Racing+Sans+One&family=Roboto+Condensed:wght@300;400;500;600;700;800;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,700;1,900&display=swap" rel="stylesheet"/>
+
+    <link href="css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+		<link rel="stylesheet" href="https://cdn.datatables.net/select/1.2.7/css/select.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.bootstrap5.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css"/>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css"/>
+    
+  </head>
+
+<body class="dahbo-dd">
+
+<div class="d-flex align-items-start bodyt">
+  <aside class="main-sliderbar">
+    
+    <div class="menu-slidebar position-relative">
+      <div class="top-bars d-flex align-items-start">
+        <button class="navbar-toggler text-white p-0 border-0 d-block" type="button" >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+          </svg>
+        </button>
+
+        <a href="index.html" class="logo-dash">
+          <img alt="logo" src="images/logobi.png" class="logn"/>
+          
+        </a>
+      </div>
+        <ul class="silder-menu">
+            <li>
+            <a href="index.html" class="link05 active-me"> 
+                
+                <span class="txet-men06"> Tasks and Projects </span> 
+            </a>
+            </li>
+            <li>
+                <a href="manage_user.html" class="link05"> 
+                  
+                  <span class="txet-men06"> Manage user </span> 
+                </a>
+            </li>
+            
+
+        </ul>
+
+       
+    </div>
+  </aside>
+
+  <main class="float-start content-wrapper">
+    
+    <header class="dashboard-head float-start w-100">
+      
+      <div class="d-flex align-items-center justify-content-start d-lg-none mt-4 mb-3">
+         <button class="btn btn-golger p-0 text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+          </svg>
+         </button>
+          <a href="index.html" class="logo-modile">
+             <img alt="logo" src="images/logobi.png"/>
+          </a>
+      </div>
+      <div class="d-flex w-100 top-header align-items-center justify-content-start">
+        
+       
+
+        <div class="search-box d-none d-lg-flex align-items-center">
+          <input type="text" class="form-control"/>
+          <button type="submit" class="btn btn-search p-0">
+            <i data-feather="search"></i>
+          </button>
+        </div>
+
+        <div class="cloclp-div">
+          <div id="clock" class="d-flex align-items-center text-white">
+            <h2 class="unit" id="hours"></h2>
+            <h2>:</h2>
+            <h2 class="unit" id="minutes"></h2>
+            <sup class="unit" id="ampm"></sup>
+          </div>
+        </div>
+
+        <nav class="navbar navbar-expand navbar-light">
+          
+            
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+              
+                
+               
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link user-text d-flex align-items-center dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button"  aria-expanded="false">
+                      <div class="piv-user">
+                        <img alt="ser" src="images/teacher-11.jpg"/>
+                      </div>
+                      <h5 class="text-white "> James Dan </h5>
+                  </a>
+                  <ul class="dropdown-menu show-big08 dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li>
+                      <a data-bs-toggle="offcanvas" href="#accountui" role="button" class="user-name01-fullw05 d-flex align-items-center justify-content-between w-100">
+                          
+                          <div class="left-divu-dropdown d-flex align-items-center">
+                            <div class="imguser">
+                                <img alt="er" src="images/user01.svg"/>
+                            </div>
+                            <h5> Vanessa Due </h5>
+                          </div>
+                          <p class="btn btnpor"> Profile </p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="logout d-flex align-items-center justify-content-between w-100">
+                          
+                          <div class="left-divu-dropdown d-flex align-items-center">
+                            <div class="imguser">
+                                <img alt="er" src="images/system-auth-form__icon-logout.svg"/>
+                            </div>
+                            <h5> Log out </h5>
+                          </div>
+                      </a>
+                    </li>
+                   
+                    
+                  </ul>
+                </li>
+               
+                
+              </ul>
+              
+            </div>
+        
+        </nav>
+      </div>
+
+    </header>
+
+    <div class="contentoi">
+      <section class="top-tabsl-div w-100">
+          <ul class="d-flex align-items-center">
+            <li>
+              <a href="index.html" class="comoiu-main position-relative">
+                   Tasks
+                   <span class="cou06">6</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="comoiu-main position-relative">
+                   Ongoing
+                   <span class="cou06">7</span>
+              </a>
+            </li>
+            
+          </ul>
+
+        
+      </section>
+      <section class="top-sectioun d-inline-block w-100">
+         
+              <div class="d-flex top-boer-ali align-items-center">
+                  <div class="left-texr">
+                      <h2 class="text-white titels-01"> Contacts </h2>
+                  </div>
+                  <div class="right-serach-div col-lg-9 d-flex align-items-center ps-5">
+                    <button type="button" class="btn btn-catrea ctre-2" data-bs-toggle="offcanvas" data-bs-target="#addnew">
+                      Create
+                    </button>
+                    
+
+                  
+
+                    
+                  </div>
+              </div>
+              <div class="d-flex align-items-center subnm-menu-div">
+                  <div class="letfr-menus">
+                    <ul class="d-flex align-items-center">
+                      <li>
+                        <a href="#" class="menu05 active-me"> List </a>
+                      </li>
+                      <li>
+                        <a href="#" class="menu05"> Deadline </a>
+                      </li>
+                      
+
+                    </ul>
+                  </div>
+                 
+              </div>
+
+      </section>
+
+      <section class="mail-sercotu d-inline-block w-100">
+       
+            <div class="onisde d-inline-block w-100 amk position-relative">
+              <table id="example" class="display" style="width:100%">
+                <thead>
+                  <tr>
+                    <th style="text-align: center"><input type="checkbox" id="select_all" /></th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Designation</th>
+                    <th>Role</th>
+                    <th>Created</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td>
+                        <a href="contact-details.html">
+                            <span class="crm-pic">
+                                <img src="images/a1.jpg"/> 
+                            </span>
+                            <span class="txer08">  Simon James </span>
+                        </a>
+                    </td>
+                    <td>
+                       emaple@gmail.com
+                    </td>
+                    <td> +91 7564075640 </td>
+                    <td>
+                       Web Designer
+                    </td>
+                    <td>
+                      UI/UX
+                    </td>
+                    <td>
+                      Amit Pan
+                   </td>
+                   
+                   <td>
+                    <a  href="contact-details.html" class="btm ediet d-table">
+                      <i class="fas fa-pencil-alt"></i>
+                    </a>
+                    <a href="#" class="btm ediet d-table ms-3">
+                      <i class="fas fa-trash-alt"></i>
+                      </a>
+                  </td>
+                 
+                   
+                    
+                  </tr>
+
+                  <tr>
+                    <td></td>
+                    <td>
+                        <a href="contact-details.html">
+                            <span class="crm-pic">
+                                <img src="images/a1.jpg"/> 
+                            </span>
+                            <span class="txer08">  Simon James </span>
+                        </a>
+                    </td>
+                    <td>
+                       emaple@gmail.com
+                    </td>
+                    <td> +91 7564075640 </td>
+                    <td>
+                       Web Designer
+                    </td>
+                    <td>
+                      UI/UX
+                    </td>
+                    <td>
+                      Amit Pan
+                   </td>
+                   
+                   <td>
+                    <a  href="contact-details.html" class="btm ediet d-table">
+                      <i class="fas fa-pencil-alt"></i>
+                    </a>
+                    <a href="#" class="btm ediet d-table ms-3">
+                      <i class="fas fa-trash-alt"></i>
+                      </a>
+                  </td>
+                   
+                    
+                  </tr>
+
+
+                  <tr>
+                    <td></td>
+                    <td>
+                        <a href="contact-details.html">
+                            <span class="crm-pic">
+                                <img src="images/a1.jpg"/> 
+                            </span>
+                            <span class="txer08">  Simon James </span>
+                        </a>
+                    </td>
+                    <td>
+                       emaple@gmail.com
+                    </td>
+                    <td> +91 7564075640 </td>
+                    <td>
+                       Web Designer
+                    </td>
+                    <td>
+                      UI/UX
+                    </td>
+                    <td>
+                      Amit Pan
+                   </td>
+                   <td>
+                    <a  href="contact-details.html" class="btm ediet d-table">
+                      <i class="fas fa-pencil-alt"></i>
+                    </a>
+                    <a href="#" class="btm ediet d-table ms-3">
+                      <i class="fas fa-trash-alt"></i>
+                      </a>
+                  </td>
+                   
+                   
+                    
+                  </tr>
+
+                  <tr>
+                    <td></td>
+                    <td>
+                        <a href="contact-details.html">
+                            <span class="crm-pic">
+                                <img src="images/a1.jpg"/> 
+                            </span>
+                            <span class="txer08">  Simon James </span>
+                        </a>
+                    </td>
+                    <td>
+                       emaple@gmail.com
+                    </td>
+                    <td> +91 7564075640 </td>
+                    <td>
+                       Web Designer
+                    </td>
+                    <td>
+                      UI/UX
+                    </td>
+                    <td>
+                      Amit Pan
+                   </td>
+                   <td>
+                    <a  href="contact-details.html" class="btm ediet d-table">
+                      <i class="fas fa-pencil-alt"></i>
+                    </a>
+                    <a href="#" class="btm ediet d-table ms-3">
+                      <i class="fas fa-trash-alt"></i>
+                      </a>
+                  </td>
+                   
+                   
+                   
+                    
+                  </tr>
+
+
+                </tbody>
+              </table>
+
+              <button id="btu" class="btn btn-delect" disabled> Delete </button>
+              
+            </div>
+        
+      </section>
+
+      <footer class="main-footer01">
+        <div class="d-flex align-items-center justify-content-center">
+             
+             <p class="text-white "> © 2024 Writerz Inc. All rights reserved. | <a href="#">Privacy</a> </p>
+        </div>
+     </footer>
+
+    </div>
+  </main>
+
+
+</div>
+
+
+
+<div class="offcanvas offcanvas-end addm-nu" id="addnew">
+  <button type="button" class="btn-close nt-close text-reset" data-bs-dismiss="offcanvas">
+    <span>
+      <img alt="cloe" src="images/close.svg"/>
+    </span> Contact
+  </button>
+ 
+  <div class="offcanvas-body position-relative">
+       
+      <div class="takyt-body ">
+        <div class="d-block d-lg-none">
+          <button type="button" class="btn-close top-btnh text-reset" data-bs-dismiss="offcanvas">
+            <span>
+              <img alt="cloe" src="images/close.svg"/>
+            </span> 
+          </button>
+        </div>
+          <div class="top-headr">
+              <div class="d-flex align-items-center justify-content-between">
+                  <h2> Add new user
+                  </h2>
+
+                  
+                  
+              </div>
+          </div>
+          <div class="test-block-div">
+              <div class="d-flex vort algign-items-center">
+                  <input type="text" class="form-control" placeholder="Enter task name"/>
+                  <div class="form-check m-0">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      High Priority
+                    </label>
+                  </div>
+              </div>
+
+             
+              <div class="adount">
+                <div class="form-add-fom">
+                  <div class="row row-cols-1 row-cols-md-2 gy-4 g-lg-5 align-items-center">
+                      <div class="col">
+                          <div class="form-group">
+                              <label> Name </label>
+                          </div>
+                          <input type="text" class="form-control"/>
+                      </div>
+                      <div class="col">
+                        <div class="form-group">
+                            <label> E-mail </label>
+                        </div>
+                        <input type="email" class="form-control"/>
+                      </div>
+                      <div class="col">
+                          <div class="form-group">
+                              <label> Phone </label>
+                          </div>
+                          <input type="text" class="form-control"/>
+                      </div>
+                      
+                      <div class="col">
+                          <div class="form-group">
+                              <label> Designation </label>
+                              <select class="form-select">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="col">
+                        <div class="form-group">
+                          <label> Role </label>
+                          <select class="form-select">
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                         
+                      </div>
+                      <div class="col">
+                        <div class="form-group">
+                          <label> Created </label>
+                          <select class="form-select">
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            
+
+             
+
+              
+          </div>
+
+
+          
+      </div>
+      <div class="footer-diuv-modal">
+         <div class="d-flex align-items-center">
+            <button type="button" class="btn btn-aditext"> Add </button>
+            <button type="button" class="btn btn-aditext ms-3"> Cancel </button>
+         </div>
+      </div>
+    
+  </div>
+</div>
+
+
+
+<div class="offcanvas offcanvas-end addm-nu" id="accountui">
+  <button type="button" class="btn-close nt-close text-reset" data-bs-dismiss="offcanvas">
+    <span>
+      <img alt="cloe" src="images/close.svg"/>
+    </span>close
+  </button>
+ 
+  <div class="offcanvas-body position-relative">
+       
+      <div class="takyt-body ">
+        <div class="d-block d-lg-none">
+          <button type="button" class="btn-close top-btnh text-reset" data-bs-dismiss="offcanvas">
+            <span>
+              <img alt="cloe" src="images/close.svg"/>
+            </span> 
+          </button>
+        </div>
+          <div class="top-headr">
+              <div class="d-flex align-items-center justify-content-between">
+                  <h2> Subrata Das </h2>
+
+              
+
+                  
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="test-block-div userpimo">
+                <div class="user-pic-name">
+                  <div class="profile-pic">
+                    <label class="-label" for="file">
+                      <span class="glyphicon glyphicon-camera"></span>
+                      <span>Change Image</span>
+                    </label>
+                    <input id="file" type="file" onchange="loadFile(event)"/>
+                    <img src="images/teacher-11.jpg" id="output" width="200" />
+                  </div>
+                </div>
+              </div>
+           </div>
+           <div class="col-lg-8">
+               <div class="test-block-div">
+                  <div class="cont-header">
+                     <h2>  Contact information </h2>
+                  </div>
+                  <div class="proifle-pic-name">
+                       <div class="row row-cols-1  gy-4 ">
+                          <div class="col">
+                             <div class="form-group">
+                                <label> Name </label>
+                                <h5>  Mrs. Smith </h5>
+                             </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                               <label> E-mail </label>
+                               <h5>  exmpale@gmail.com </h5>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                               <label> Phone </label>
+                               <h5>  +91 2560256400 </h5>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                               <label> Designation</label>
+                               <h5>  Web Designer </h5>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                               <label> Role </label>
+                               <h5>  UI/UX </h5>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="form-group">
+                               <label> Created </label>
+                               <h5>  exmpale@gmail.com </h5>
+                            </div>
+                          </div>
+                       </div>
+                  </div>
+               </div>
+           </div>
+          </div>
+          
+
+
+          
+      </div>
+      <div class="footer-diuv-modal">
+         <div class="d-flex align-items-center">
+            <a href="contact-details.html"  class="btn btn-aditext"> Edit </a>
+            <button type="button" class="btn btn-aditext ms-3"> Cancel </button>
+         </div>
+      </div>
+    
+  </div>
+</div>
+
+
+<script src="js/bootstrap.bundle.min.js" ></script>
+<script src="js/jquery.min.js" ></script>
+<script src="js/custom.js" ></script>
+<script src="https://unpkg.com/feather-icons"></script>
+
+
+<script>
+  feather.replace();
+</script>
+
+<script>
+			$(document).ready(function() {
+			
+      let table = $('#example').DataTable( {
+        responsive: true,
+        searching: false,
+        info: false,
+        columnDefs: [ {
+          orderable: false,
+          
+          className: 'select-checkbox',
+          targets:   0
+        } ],
+        select: {
+          style:    'multi',
+          selector: 'td:first-child'
+        },
+        order: [[ 1, 'asc' ]]
+      });
+      
+          $('#example').on('click', '#select_all', function () {
+        if ($('#select_all:checked').val() === 'on')
+          table.rows().select();
+        else
+          table.rows().deselect();
+      });							
+    });
+
+</script>
+
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.5.0/js/responsive.bootstrap5.min.js"></script>
+
+<script>
+  var $dOut = $('#date'),
+    $hOut = $('#hours'),
+    $mOut = $('#minutes'),
+    $sOut = $('#seconds'),
+    $ampmOut = $('#ampm');
+var months = [
+  'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'
+];
+
+var days = [
+  'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'
+];
+
+function update(){
+  var date = new Date();
+  
+  var ampm = date.getHours() < 12
+             ? 'AM'
+             : 'PM';
+  
+  var hours = date.getHours() == 0
+              ? 12
+              : date.getHours() > 12
+                ? date.getHours() - 12
+                : date.getHours();
+  
+  var minutes = date.getMinutes() < 10 
+                ? '0' + date.getMinutes() 
+                : date.getMinutes();
+  
+  var seconds = date.getSeconds() < 10 
+                ? '0' + date.getSeconds() 
+                : date.getSeconds();
+  
+  var dayOfWeek = days[date.getDay()];
+  var month = months[date.getMonth()];
+  var day = date.getDate();
+  var year = date.getFullYear();
+  
+  var dateString = dayOfWeek + ', ' + month + ' ' + day + ', ' + year;
+  
+  $dOut.text(dateString);
+  $hOut.text(hours);
+  $mOut.text(minutes);
+  $sOut.text(seconds);
+  $ampmOut.text(ampm);
+} 
+
+update();
+window.setInterval(update, 1000);
+</script>
+
+<script>
+$(document).ready(function() {
+    $('.js-example-basic-multiple').select2();
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+
+<script>
+  $(function() {
+	$( "#datepicker" ).datepicker();
+  });
+</script>
+
+<script>
+  $(document).ready(function(){
+    $(".navbar-toggler").click(function(){
+      $(".dahbo-dd").toggleClass("full-main");
+    });
+  });
+  $(document).ready(function(){
+    $(".ctre-2").click(function(){
+      $(".right-notifacition").addClass("whaite-gar");
+    });
+    $(".nt-close").click(function(){
+      $(".right-notifacition").removeClass("whaite-gar");
+    });
+  });
+</script>
+
+<script>
+  $(document).ready(function () {
+    $('#select_all').change(function () {
+      $('#btu').prop("disabled", !$("#select_all").prop("checked")); 
+    })
+    $('.select-checkboxgh').click(function () {
+      $('#btu').prop("disabled", !$("#select_all").prop("checked")); 
+    })
+    
+  });
+</script>
+
+<script>
+  var loadFile = function (event) {
+  var image = document.getElementById("output");
+  image.src = URL.createObjectURL(event.target.files[0]);
+};
+
+</script>
+
+</body>
+</html>

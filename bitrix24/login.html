@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="marhansolutions.com" />
+    <title>Writerz - Login</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&family=Kanit:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&family=Poppins:wght@500;600;700;800;900&family=Racing+Sans+One&family=Roboto+Condensed:wght@300;400;500;600;700;800;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,700;1,900&display=swap" rel="stylesheet"/>
+
+    <link href="css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+		<link rel="stylesheet" href="https://cdn.datatables.net/select/1.2.7/css/select.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.bootstrap5.min.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css"/>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/jquery.datetimepicker.min.css" />
+  </head>
+
+<body class="dahbo-dd">
+
+    <div class="container-fluid px-lg-0 m-lgod-vi">
+
+        <div class="row align-items-center justify-content-between">
+            <div class="col-lg-5 position-relative">
+                <div class="left-divu position-relative">
+
+                    <div class="como-left-divut d-inline-block w-100">
+                        <div class="top-logo-ui">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="clogo">
+                                <a href="index.html">
+                                    <img alt="ser" src="images/logobi.png"/>
+                                </a>
+                                </div>
+                                <a href="#" class="back btn text-white">
+                                <span> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                                    </svg>
+                                </span>
+                                back to site </a>
+                            </div>
+                        </div>
+                        <div class="login-text05">
+                             <h2 class="text-white"> Your company. United. </h2>
+                             <h5 class="text-white"> Free. Unlimited. Online. </h5>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="right-divu-login">
+                      <a href="#" class="logo-login text-center mx-auto mb-5 w-100 d-table">
+                        <img alt="lt" src="images/footer-logo01.png"/>
+                      </a>
+                     <div class="texr-login col-lg-8 mx-auto d-table">
+                          <h2> Login
+                            <span class="mt-2 d-block"> Enter your Account details </span>
+                          </h2>
+
+                          <div class="form-group cm-fild">
+                            <label>Your Email / Phonenumber </label>
+                            <input type="email" class="form-control"/>
+                          </div>
+                          <div class="form-group cm-fild">
+                            <label>Password</label>
+                            <input type="password" class="form-control"/>
+                          </div>
+
+                          <div class="diuy-div d-sm-flex align-items-center justify-content-between">
+                            <button type="button" class="btn btn-left-btn w-100"> Loign </button>
+
+                          </div>
+
+                          <p class="text-center"> Do not have an account? <a href="register.html" class="loginu"> Register </a> </p>
+
+                     </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+<script src="js/bootstrap.bundle.min.js" ></script>
+<script src="js/jquery.min.js" ></script>
+<script src="js/custom.js" ></script>
+<script src="https://unpkg.com/feather-icons"></script>
+
+
+<script>
+  feather.replace();
+</script>
+
+<script>
+  var $dOut = $('#date'),
+    $hOut = $('#hours'),
+    $mOut = $('#minutes'),
+    $sOut = $('#seconds'),
+    $ampmOut = $('#ampm');
+var months = [
+  'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'
+];
+
+var days = [
+  'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'
+];
+
+function update(){
+  var date = new Date();
+
+  var ampm = date.getHours() < 12
+             ? 'AM'
+             : 'PM';
+
+  var hours = date.getHours() == 0
+              ? 12
+              : date.getHours() > 12
+                ? date.getHours() - 12
+                : date.getHours();
+
+  var minutes = date.getMinutes() < 10
+                ? '0' + date.getMinutes()
+                : date.getMinutes();
+
+  var seconds = date.getSeconds() < 10
+                ? '0' + date.getSeconds()
+                : date.getSeconds();
+
+  var dayOfWeek = days[date.getDay()];
+  var month = months[date.getMonth()];
+  var day = date.getDate();
+  var year = date.getFullYear();
+
+  var dateString = dayOfWeek + ', ' + month + ' ' + day + ', ' + year;
+
+  $dOut.text(dateString);
+  $hOut.text(hours);
+  $mOut.text(minutes);
+  $sOut.text(seconds);
+  $ampmOut.text(ampm);
+}
+
+update();
+window.setInterval(update, 1000);
+</script>
+
+<script>
+			$(document).ready(function() {
+
+      let table = $('#example').DataTable( {
+        responsive: true,
+        searching: false,
+        info: false,
+        columnDefs: [ {
+          orderable: false,
+
+          className: 'select-checkbox',
+          targets:   0
+        } ],
+        select: {
+          style:    'multi',
+          selector: 'td:first-child'
+        },
+        order: [[ 1, 'asc' ]]
+      });
+
+          $('#example').on('click', '#select_all', function () {
+        if ($('#select_all:checked').val() === 'on')
+          table.rows().select();
+        else
+          table.rows().deselect();
+      });
+    });
+
+</script>
+
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/select/1.2.7/js/dataTables.select.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.5.0/js/responsive.bootstrap5.min.js"></script>
+
+
+
+
+
+<script>
+$(document).ready(function() {
+    $('.js-example-basic-multiple').select2();
+    $('.js-example-basic-multiplect').select2();
+    $('.js-example-basic-multiplept').select2();
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+
+<script>
+  $(function() {
+	$( "#datepicker" ).datepicker();
+  $( "#datepicker2" ).datepicker();
+  });
+</script>
+
+<script>
+
+  $(document).ready(function(){
+    $("#crate-btn").click(function(){
+      $("#ctar-div").toggle();
+    });
+    $("#participants-btn").click(function(){
+      $("#ctar-div-pt").toggle();
+    });
+   });
+</script>
+
+<script>
+  jQuery(document).ready(function () {
+  ImgUpload();
+});
+
+function ImgUpload() {
+  var imgWrap = "";
+  var imgArray = [];
+
+  $('.upload__inputfile').each(function () {
+    $(this).on('change', function (e) {
+      imgWrap = $(this).closest('.upload__box').find('.upload__img-wrap');
+      var maxLength = $(this).attr('data-max_length');
+
+      var files = e.target.files;
+      var filesArr = Array.prototype.slice.call(files);
+      var iterator = 0;
+      filesArr.forEach(function (f, index) {
+
+        if (!f.type.match('image.*')) {
+          return;
+        }
+
+        if (imgArray.length > maxLength) {
+          return false
+        } else {
+          var len = 0;
+          for (var i = 0; i < imgArray.length; i++) {
+            if (imgArray[i] !== undefined) {
+              len++;
+            }
+          }
+          if (len > maxLength) {
+            return false;
+          } else {
+            imgArray.push(f);
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+              var html = "<div class='upload__img-box'><div style='background-image: url(" + e.target.result + ")' data-number='" + $(".upload__img-close").length + "' data-file='" + f.name + "' class='img-bg'><div class='upload__img-close'></div></div></div>";
+              imgWrap.append(html);
+              iterator++;
+            }
+            reader.readAsDataURL(f);
+          }
+        }
+      });
+    });
+  });
+
+  $('body').on('click', ".upload__img-close", function (e) {
+    var file = $(this).parent().data("file");
+    for (var i = 0; i < imgArray.length; i++) {
+      if (imgArray[i].name === file) {
+        imgArray.splice(i, 1);
+        break;
+      }
+    }
+    $(this).parent().parent().remove();
+  });
+}
+</script>
+
+<script>
+  $(document).ready(function () {
+    $('#select_all').change(function () {
+      $('#btu').prop("disabled", !$("#select_all").prop("checked"));
+    })
+    $('.select-checkboxgh').click(function () {
+      $('#btu').prop("disabled", !$("#select_all").prop("checked"));
+    })
+
+  });
+</script>
+
+<script>
+  var loadFile = function (event) {
+  var image = document.getElementById("output");
+  image.src = URL.createObjectURL(event.target.files[0]);
+};
+
+</script>
+
+<script>
+  $(document).ready(function() {
+     $('#datetimepicker').datetimepicker();
+     $('#datetimepickerbu').datetimepicker();
+     $('#datetimepickerdeas').datetimepicker();
+
+
+
+  });
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js"></script>
+
+</body>
+</html>
